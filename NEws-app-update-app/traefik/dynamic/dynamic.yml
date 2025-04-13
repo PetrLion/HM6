@@ -1,0 +1,9 @@
+http:
+  routers:
+    dashboard:
+      rule: "Host(`localhost`)" 
+      service: api@internal
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: letsencrypt
